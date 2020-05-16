@@ -1,0 +1,19 @@
+<% if current_doctor.appointments.present? %>
+  <table class='table'>
+    <th>
+      <td>Start Time</td>
+      <td>End Time </td>
+      <td>Patient ID </td>
+      <td>Action </td>
+    </th>
+    <% current_doctor.appointments.each do |appointment| %>
+      <tr>
+        <td> appointment.start_time</td>
+        <td> appointment.end_time</td>
+        <td> appointment.patient_is</td>
+        <td> <%= link_to "Accept", accept_appoinment(appointment.id) %></td>
+        <td> <%= link_to "Reject", reject_appoinment(appointment.id) %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

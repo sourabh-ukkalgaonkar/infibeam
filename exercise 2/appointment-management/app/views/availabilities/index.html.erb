@@ -3,8 +3,9 @@
 <% if current_doctor.availabilities.present? %>
   <table class='table'>
     <thead>
-      <tr>id</tr>
-      <tr>start_time</tr>
+      <th>id</th>
+      <th>start_time</th>
+      <th>end_time</th>
     </thead>
     <% current_doctor.availabilities.each do |availaibility| %>
       <tbody>
