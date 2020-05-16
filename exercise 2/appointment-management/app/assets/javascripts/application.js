@@ -14,4 +14,6 @@
 //= require activestorage
 //= require jquery3
 //= require bootstrap
+//= require moment
+//= require bootstrap-datetimepicker
 //= require_tree .

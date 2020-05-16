@@ -1,0 +1,19 @@
+<%= render 'shared/doctor_nav' %>
+
+<% if current_doctor.availabilities.present? %>
+  <table class='table'>
+    <thead>
+      <tr>id</tr>
+      <tr>start_time</tr>
+    </thead>
+    <% current_doctor.availabilities.each do |availaibility| %>
+      <tbody>
+        <tr><%= availaibility.id %></tr>
+        <tr><%= availaibility.start_date %></tr>
+        <tr><%= availaibility.end_date %></tr>
+      </tbody>
+    <% end %>
+  </table>
+<% else %>
+  No Availaibility Set Yet
+<% end %>
