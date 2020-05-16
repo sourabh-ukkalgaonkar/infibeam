@@ -1,0 +1,3 @@
+<%= render 'shared/with_out_session' if current_doctor.blank? %>
+
+<%= render 'shared/doctor_nav' if current_doctor.present? %>
