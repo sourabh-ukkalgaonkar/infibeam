@@ -1,17 +1,20 @@
 <%= render 'shared/doctor_nav' %>
-
 <% if current_doctor.availabilities.present? %>
   <table class='table'>
     <thead>
       <th>id</th>
-      <th>start_time</th>
-      <th>end_time</th>
+      <th>Date</th>
+      <th>Start Time</th>
+      <th>End Time</th>
     </thead>
     <% current_doctor.availabilities.each do |availaibility| %>
       <tbody>
-        <tr><%= availaibility.id %></tr>
-        <tr><%= availaibility.start_date %></tr>
-        <tr><%= availaibility.end_date %></tr>
+        <tr>
+          <td><%= availaibility.id %></td>
+          <td><%= availaibility.date %></td>
+          <td><%= availaibility.start_time %></td>
+          <td><%= availaibility.end_time %></td>
+        </tr>
       </tbody>
     <% end %>
   </table>
